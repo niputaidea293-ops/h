@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuscaYa</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">BuscaYa</div>
+    <button id="toggleConfig" class="ghost">⚙️</button>
+  </header>
+
+  <main class="search-layout">
+    <h1 class="logo">BuscaYa</h1>
+    <form id="searchForm" class="search-box">
+      <input id="queryInput" type="text" placeholder="Busca lo que quieras..." autocomplete="off" required />
+      <button type="submit">Buscar</button>
+    </form>
+
+    <section id="resultCard" class="result hidden" aria-live="polite">
+      <p class="label">Resultado inteligente</p>
+      <p id="resultQuery" class="query"></p>
+      <p id="resultText" class="roast"></p>
+    </section>
+
+    <section id="history" class="history"></section>
+  </main>
+
+  <dialog id="configDialog">
+    <h2>Configuración Gemini</h2>
+    <label>
+      API key
+      <input id="apiKeyInput" type="password" />
+    </label>
+    <label>
+      Tono
+      <input id="toneInput" type="text" placeholder="sarcástico y divertido" />
+    </label>
+    <menu>
+      <button id="saveConfig" value="default">Guardar</button>
+      <button id="closeConfig" value="cancel">Cerrar</button>
+    </menu>
+    <p class="small">La clave se guarda en este navegador (localStorage).</p>
+  </dialog>
+
+  <script src="./app.js"></script>
+</body>
+</html>
