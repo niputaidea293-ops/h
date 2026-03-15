@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "BurlonAI Search Reactor",
+  "version": "1.0.0",
+  "description": "Detecta búsquedas en Firefox y responde con comentarios burlones generados por Gemini.",
+  "permissions": [
+    "tabs",
+    "notifications",
+    "storage",
+    "*://*.google.com/*",
+    "*://duckduckgo.com/*",
+    "*://www.bing.com/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "icons": {
+    "128": "icon.svg"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "burlonai@local"
+    }
+  }
+}
